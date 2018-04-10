@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular practica</title>
+	<script src="angular-1.3.5/angular.js"></script>
+</head>
+<body ng-app>
+	{{"hola" + "mundo"}}
+
+
+<form action="">
+	<label for="">nombre</label>
+	<input type="text">
+	<button>guardar</button>
+</form>
+
+
+
+<div class="container">
+Entiendes el contenido de este libro?
+<input type="checkbox" ng-model="respuesta">
+<div ng-hide="respuesta">
+<h2>Me esforzare más!</h2>
+</div>
+<div ng-show="respuesta">
+<h2>Felicidades!</h2>
+</div>
+</div>
+	<script>
+		function miCtrl($scope){
+			$scope.mensaje = "hola desde javascript";
+		}
+	</script>
+
+<div class="container" ng-controller="miCtrl">
+	<h1 ng-bind="mensaje"></h1>
+</div>
+<script src="angular-1.3.5/angular.js"></script>
+</body>
+</html>
